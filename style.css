@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    /* border: 1px solid grey; */
 }
 
 body {
@@ -11,7 +12,7 @@ body {
 .container {
     display: grid;
     grid-template-columns: 300px 1fr;
-    grid-template-rows: 150px 1fr;
+    grid-template-rows: 200px 1fr;
     height: 100vh;
     width: 100vw;
 }
@@ -21,7 +22,7 @@ body {
     align-content: start;
     gap: 50px;
     grid-row: 1 / -1;
-    padding: 30px;
+    padding: 15px 30px;
     background-color: #0ea5e9;
     color: #ffffff;
 }
@@ -67,9 +68,131 @@ body {
 
 
 .header {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
     grid-column: 2 / -1;
-    background-color: lightyellow;
+    background-color: #f0f9ff;
+    padding: 5px 30px;
 }
+
+.header > .header-top {
+    display: grid;
+    grid-auto-flow: column;
+    /* grid-template-columns: auto auto; */
+    justify-content: space-between;
+}
+
+.header-top > .search-container {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.search-container > .search-icon {
+    width: 30px;
+}
+
+.search-container > #search {
+    width: 100ch;
+    height: 40px;
+    padding: 3px 15px;
+    background-color: #E2E8F0;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+}
+
+.header-top > .profile-options {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-options > .notification-button {
+    width: 30px;
+    height: 30px;
+}
+
+.notification-button > .notification-icon {
+    width: 100%;
+}
+
+.profile-options > .profile-button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-button > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.profile-options > .profile-name > a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 700;
+}
+
+.header > .header-bottom {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: space-between;
+}
+
+.header-bottom > .profile-greeting {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+}
+
+.profile-greeting > .profile-picture {
+    align-self: center;
+    height: 80px;
+    width: 80px;
+    grid-column: 1;
+    grid-row: 1 / -1;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.profile-picture > img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.profile-greeting > .greet {
+    align-self: end;
+}
+
+.profile-greeting > .username-display {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.header-bottom > .project-options-container {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.project-options-container > .project-option {
+    display: grid;
+    place-content: center;
+    width: 80px;
+    height: 30px;
+    font-weight: 700;
+    background-color: #0ea5e9;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
 
 .main-content {
     grid-column: 2 / -1;
